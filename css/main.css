@@ -41,6 +41,7 @@ main{
 .stage{
   position:absolute;
   inset:0;
+   top: 15%;
   display:flex;
   justify-content:center;
   pointer-events:none;
@@ -235,3 +236,4 @@ ul{list-style:none;padding:0;margin:10px 0}
 
 .raiderz .edge-left{margin-right:.2em}
 .raiderz .edge-right{margin-left:.2em}
+
