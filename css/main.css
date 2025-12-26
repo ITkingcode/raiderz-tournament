@@ -1,3 +1,6 @@
+/* ===============================
+   ROOT VARIABLES
+================================ */
 :root{
   --bg:#0b0b10;
   --panel:#161625;
@@ -6,18 +9,49 @@
   --gold:#d4af37;
   --silver:#c0c0c0;
   --bronze:#cd7f32;
+
+  --bg0:#0b0b10;
+  --bg1:#17172a;
+
+  --stroke:#0a0a12;
+  --glow:rgba(126,96,174,.35);
 }
 
 *{box-sizing:border-box}
 
+/* ===============================
+   BASE LAYOUT
+================================ */
+header, main{ position:relative; z-index:1; }
 body{
+  position:relative; 
   margin:0;
   font-family:Arial,sans-serif;
   background:radial-gradient(1200px 600px at 50% -100px,#1a1630,var(--bg));
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
   color:#eee;
 }
+main{
+  position:relative;
+  z-index:1;
+}
+/* Keep stage for demo/wordmark pages (safe even if unused) */
+.stage{
+  position:absolute;
+  inset:0;
+  display:flex;
+  justify-content:center;
+  pointer-events:none;
+  z-index:-1;
 
-/* ===== HEADER ===== */
+  opacity:0.75;          /* background feel */
+}
+
+/* ===============================
+   HEADER
+================================ */
 header{
   position:fixed;
   top:0;
@@ -34,7 +68,6 @@ header{
 }
 
 header .left, header .right{display:flex;gap:10px}
-/* ===== */
 
 main{padding:100px 20px 20px}
 
@@ -94,7 +127,9 @@ ul{list-style:none;padding:0;margin:10px 0}
 
 .winner{background:#2ecc71!important}
 
-/* ===== RANKING ===== */
+/* ===============================
+   RANKING
+================================ */
 .ranking-list{display:flex;flex-direction:column;gap:10px;align-items:center}
 
 .rank-card{
@@ -123,7 +158,80 @@ ul{list-style:none;padding:0;margin:10px 0}
   padding:10px;
   margin:8px 0
 }
+
 .kokoro-logo{
-    height: auto;
-    width: 75px;
+  height:auto;
+  width:75px;
 }
+
+/* ===============================
+   WORDMARK
+================================ */
+.raiderz{
+  user-select:none;
+  font-family:"Cinzel","Trajan Pro","Times New Roman",serif;
+  font-weight:900;
+  text-transform:uppercase;
+
+  font-size:17em;
+  line-height:1;
+  position:relative;
+  display:inline-block;
+
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
+
+  background:linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 16%,
+    #ffffff 36%,
+    #ffffff 52%,
+    #ffffff 72%,
+    #ffffff 100%
+  );
+  background-size:100% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  -webkit-text-stroke:2.5px var(--stroke);
+  filter:drop-shadow(0 6px 14px var(--glow));
+
+  text-shadow:
+    0 -1px 0 rgba(255,255,255,.10),
+    0  1px 0 rgba(0,0,0,.25),
+    0  2px 0 rgba(20,20,20,.30),
+    0  3px 0 rgba(50,50,50,.34),
+    0  4px 0 rgba(0,0,0,.38),
+    0  5px 0 rgba(10,10,10,.42),
+    0 10px 24px rgba(0,0,0,.55);
+}
+
+/* ===============================
+   WORDMARK EDGES
+================================ */
+.raiderz .edge{
+  display:inline-block;
+  transform:scale(1.4,1.42);
+
+  background:inherit;
+  background-size:100% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  clip-path:polygon(
+    4% 0%,
+    96% 0%,
+    100% 12%,
+    100% 88%,
+    96% 100%,
+    4% 100%,
+    0% 88%,
+    0% 12%
+  );
+}
+
+.raiderz .edge-left{margin-right:.2em}
+.raiderz .edge-right{margin-left:.2em}
