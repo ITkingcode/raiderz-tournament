@@ -1,0 +1,129 @@
+:root{
+  --bg:#0b0b10;
+  --panel:#161625;
+  --purple:#7a4cff;
+  --purple-dark:#5b38c7;
+  --gold:#d4af37;
+  --silver:#c0c0c0;
+  --bronze:#cd7f32;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:radial-gradient(1200px 600px at 50% -100px,#1a1630,var(--bg));
+  color:#eee;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  background:#0f0f18;
+  border-bottom:1px solid #2a2a55;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  z-index:100;
+}
+
+header .left, header .right{display:flex;gap:10px}
+/* ===== */
+
+main{padding:100px 20px 20px}
+
+h1{text-align:center;margin:0}
+h2{text-align:center;color:#ccc;margin-top:0}
+
+.section{
+  max-width:760px;
+  margin:0 auto 18px;
+  background:linear-gradient(180deg,#1b1b2e,var(--panel));
+  border-radius:14px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.4)
+}
+
+.center{text-align:center}
+
+input,select,button{
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  margin:5px;
+  font-size:14px
+}
+
+input,select{
+  background:#0f0f18;
+  color:#eee;
+  border:1px solid #2a2a55
+}
+
+button{
+  cursor:pointer;
+  color:white;
+  background:linear-gradient(180deg,var(--purple),var(--purple-dark))
+}
+
+button.secondary{background:#2b2b3a}
+button.danger{background:#7a2a2a}
+
+ul{list-style:none;padding:0;margin:10px 0}
+
+.match{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:12px;
+  align-items:center;
+  margin:8px 0
+}
+
+.vs{
+  padding:6px 14px;
+  border-radius:999px;
+  background:#2a2a3a;
+  font-weight:bold
+}
+
+.winner{background:#2ecc71!important}
+
+/* ===== RANKING ===== */
+.ranking-list{display:flex;flex-direction:column;gap:10px;align-items:center}
+
+.rank-card{
+  width:100%;
+  max-width:460px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#0f0f18;
+  border:1px solid #2a2a55;
+  border-radius:12px;
+  padding:10px 14px
+}
+
+.rank-left{display:flex;gap:10px;align-items:center}
+.rank-pos{font-weight:bold;width:22px;text-align:center}
+
+.star.gold{color:var(--gold)}
+.star.silver{color:var(--silver)}
+.star.bronze{color:var(--bronze)}
+
+.history-card{
+  background:#0f0f18;
+  border:1px solid #2a2a55;
+  border-radius:12px;
+  padding:10px;
+  margin:8px 0
+}
+.kokoro-logo{
+    height: auto;
+    width: 75px;
+}
