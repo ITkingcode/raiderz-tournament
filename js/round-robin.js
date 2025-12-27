@@ -145,9 +145,9 @@ function renderRanking() {
 
   sorted.forEach((p, i) => {
     let star = "";
-    if (i === 0) star = '<span class="fas fa-medal" style="font-size:34px;color:gold"></span>';
-    if (i === 1) star = '<span class="fas fa-medal" style="font-size:28px;color:silver"></span>';
-    if (i === 2) star = '<span class="fas fa-medal" style="font-size:24;color:brown"></span>';
+   if (i === 0) star = '<i class="fa-solid fa-medal" style="font-size:24px;color:gold"></i>';
+   if (i === 1) star = '<i class="fa-solid fa-medal" style="font-size:21px;color:silver"></i>';
+   if (i === 2) star = '<i class="fa-solid fa-medal" style="font-size:18px;color:#cd7f32"></i>';
 
     // Simple points rule: 3 points per win (change if you want)
     const pts = stats[p].w * 3;
@@ -302,3 +302,4 @@ function escapeHtml(s) {
 ================================ */
 renderHistory();
 renderRanking();
+
