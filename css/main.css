@@ -48,6 +48,9 @@ main{
     opacity: 0.85;
     padding:14px 0;
 }
+img.raiderz-logo {
+    width: 425px;
+}
 
 /* ===============================
    HEADER
@@ -299,6 +302,7 @@ small#exportDate {
 
 .raiderz .edge-left{margin-right:.2em}
 .raiderz .edge-right{margin-left:.2em}
+
 
 
 
