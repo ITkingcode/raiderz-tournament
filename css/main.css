@@ -213,8 +213,8 @@ small#exportDate {
 }
 
 .kokoro-logo{
-  height:auto;
-  width:75px;
+    height: 100px;
+    width: 100px;
 }
 
 /* ===============================
@@ -288,5 +288,6 @@ small#exportDate {
 
 .raiderz .edge-left{margin-right:.2em}
 .raiderz .edge-right{margin-left:.2em}
+
 
 
