@@ -265,6 +265,11 @@ small#exportDate {
     0 10px 24px rgba(0,0,0,.55);
    width: 100%;
    text-align: center;
+   -webkit-transform: scale(1.4, 1);
+    -moz-transform: scale(1.4, 1);
+    -ms-transform: scale(1.4, 1);
+    -o-transform: scale(1.4, 1);
+    transform: scale(1.4, 1);
 }
 
 /* ===============================
@@ -294,6 +299,7 @@ small#exportDate {
 
 .raiderz .edge-left{margin-right:.2em}
 .raiderz .edge-right{margin-left:.2em}
+
 
 
 
